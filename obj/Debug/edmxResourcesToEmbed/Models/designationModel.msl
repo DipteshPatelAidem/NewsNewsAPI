@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AidemAgModelStoreContainer" CdmEntityContainer="AidemAgEntities">
+    <EntitySetMapping Name="MstDesignations">
+      <EntityTypeMapping TypeName="AidemAgModel.MstDesignation">
+        <MappingFragment StoreEntitySet="MstDesignation">
+          <ScalarProperty Name="DesignationCode" ColumnName="DesignationCode" />
+          <ScalarProperty Name="DesignationID" ColumnName="DesignationID" />
+          <ScalarProperty Name="DesignationName" ColumnName="DesignationName" />
+          <ScalarProperty Name="UserLevel" ColumnName="UserLevel" />
+          <ScalarProperty Name="DesgnLevel" ColumnName="DesgnLevel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

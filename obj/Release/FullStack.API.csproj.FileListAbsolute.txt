@@ -1,0 +1,185 @@
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\ApplicationInsights.config
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\roslyn\csc.exe
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\roslyn\System.Collections.Immutable.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\roslyn\System.Reflection.Metadata.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\roslyn\vbc.exe
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\roslyn\VBCSCompiler.exe
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\roslyn\VBCSCompiler.exe.config
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\FullStack.API.dll.config
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\FullStack.API.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\FullStack.API.pdb
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Antlr3.Runtime.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\EntityFramework.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\EntityFramework.SqlServer.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AI.Agent.Intercept.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AI.DependencyCollector.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AI.Web.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AI.WindowsServer.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.ApplicationInsights.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AspNet.Identity.Core.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Security.Cookies.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Security.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Security.Facebook.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Security.Google.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Security.OAuth.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Security.Twitter.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Web.Infrastructure.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Newtonsoft.Json.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Owin.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Net.Http.Formatting.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Cors.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Helpers.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Http.Cors.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Http.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Http.Owin.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Http.WebHost.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Mvc.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Optimization.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Razor.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.WebPages.Deployment.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.WebPages.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.WebPages.Razor.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\WebGrease.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AI.DependencyCollector.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AI.Web.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AI.WindowsServer.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.ApplicationInsights.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Newtonsoft.Json.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Net.Http.Formatting.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Http.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Http.Cors.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Helpers.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Http.WebHost.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Mvc.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Optimization.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Razor.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.WebPages.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.WebPages.Deployment.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.WebPages.Razor.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Antlr3.Runtime.pdb
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\EntityFramework.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\EntityFramework.SqlServer.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AspNet.Identity.Core.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Security.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Security.Facebook.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Security.Cookies.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Security.OAuth.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Security.Google.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Security.Twitter.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\bin\System.Web.Http.Owin.xml
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\obj\Release\FullStack.API.dll
+D:\work\rNd\FullStack UI\FullStack.API\FullStack.API\obj\Release\FullStack.API.pdb
+D:\work\rNd\JG\FullStack.API\bin\ApplicationInsights.config
+D:\work\rNd\JG\FullStack.API\bin\roslyn\csc.exe
+D:\work\rNd\JG\FullStack.API\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\work\rNd\JG\FullStack.API\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\work\rNd\JG\FullStack.API\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\work\rNd\JG\FullStack.API\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\work\rNd\JG\FullStack.API\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\work\rNd\JG\FullStack.API\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\work\rNd\JG\FullStack.API\bin\roslyn\System.Collections.Immutable.dll
+D:\work\rNd\JG\FullStack.API\bin\roslyn\System.Reflection.Metadata.dll
+D:\work\rNd\JG\FullStack.API\bin\roslyn\vbc.exe
+D:\work\rNd\JG\FullStack.API\bin\roslyn\VBCSCompiler.exe
+D:\work\rNd\JG\FullStack.API\bin\roslyn\VBCSCompiler.exe.config
+D:\work\rNd\JG\FullStack.API\bin\FullStack.API.dll.config
+D:\work\rNd\JG\FullStack.API\bin\FullStack.API.dll
+D:\work\rNd\JG\FullStack.API\bin\FullStack.API.pdb
+D:\work\rNd\JG\FullStack.API\bin\Antlr3.Runtime.dll
+D:\work\rNd\JG\FullStack.API\bin\EntityFramework.dll
+D:\work\rNd\JG\FullStack.API\bin\EntityFramework.SqlServer.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AI.Agent.Intercept.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AI.DependencyCollector.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AI.Web.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AI.WindowsServer.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.ApplicationInsights.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AspNet.Identity.Core.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Security.Cookies.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Security.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Security.Facebook.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Security.Google.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Security.OAuth.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Security.Twitter.dll
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Web.Infrastructure.dll
+D:\work\rNd\JG\FullStack.API\bin\Newtonsoft.Json.dll
+D:\work\rNd\JG\FullStack.API\bin\Owin.dll
+D:\work\rNd\JG\FullStack.API\bin\System.Net.Http.Formatting.dll
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Cors.dll
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Helpers.dll
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Http.Cors.dll
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Http.dll
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Http.Owin.dll
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Http.WebHost.dll
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Mvc.dll
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Optimization.dll
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Razor.dll
+D:\work\rNd\JG\FullStack.API\bin\System.Web.WebPages.Deployment.dll
+D:\work\rNd\JG\FullStack.API\bin\System.Web.WebPages.dll
+D:\work\rNd\JG\FullStack.API\bin\System.Web.WebPages.Razor.dll
+D:\work\rNd\JG\FullStack.API\bin\WebGrease.dll
+D:\work\rNd\JG\FullStack.API\bin\EntityFramework.xml
+D:\work\rNd\JG\FullStack.API\bin\EntityFramework.SqlServer.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AI.DependencyCollector.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AI.Web.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AI.WindowsServer.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.ApplicationInsights.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\work\rNd\JG\FullStack.API\bin\Newtonsoft.Json.xml
+D:\work\rNd\JG\FullStack.API\bin\System.Net.Http.Formatting.xml
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Http.xml
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Http.Cors.xml
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Helpers.xml
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Http.WebHost.xml
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Mvc.xml
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Optimization.xml
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Razor.xml
+D:\work\rNd\JG\FullStack.API\bin\System.Web.WebPages.xml
+D:\work\rNd\JG\FullStack.API\bin\System.Web.WebPages.Deployment.xml
+D:\work\rNd\JG\FullStack.API\bin\System.Web.WebPages.Razor.xml
+D:\work\rNd\JG\FullStack.API\bin\Antlr3.Runtime.pdb
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AspNet.Identity.Core.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Security.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Security.Facebook.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Security.Cookies.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Security.OAuth.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Security.Google.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Security.Twitter.xml
+D:\work\rNd\JG\FullStack.API\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\work\rNd\JG\FullStack.API\bin\System.Web.Http.Owin.xml
+D:\work\rNd\JG\FullStack.API\obj\Release\FullStack.API.dll
+D:\work\rNd\JG\FullStack.API\obj\Release\FullStack.API.pdb
+D:\work\rNd\JG\FullStack.API\obj\Release\FullStack.API.csprojResolveAssemblyReference.cache
