@@ -10,6 +10,7 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Web.Http.Cors;
 using System.Text;
+using System.Web.Script.Serialization;
 
 namespace FullStack.API.Controllers
 {
@@ -47,86 +48,74 @@ namespace FullStack.API.Controllers
 
         }
 
-        [Route("GetBrandCode")]
-        public string GetBrandCode(string BrndName,int MaxLimt)
+        [HttpPost]
+        [Route("GetUCNDigital")]
+        public List<UCNDigitalPreview> GetUCNCode(dynamic ucnpreview)
         {
-           //var payload = {
-           //     "brand" = 'Abc ABC',
+            string ucnMasterConfig = "[{'key':'brandCode','limit':'5','prifix':'abc','index':'1'}]";
 
-           // }
+            JavaScriptSerializer serializer = new JavaScriptSerializer();
+            dynamic masterConfig = serializer.Deserialize<dynamic>(ucnMasterConfig);
 
-           // var masterConfig =
-           // {
-           //     "brand" : {
-           //     limit: 5,
-           //     key: 'brand',
-           //     prefix: ''
-           // },
-          //  }
+            foreach (dynamic formula in masterConfig)
+            {
+                dynamic key = formula["key"];
+                if (ucnpreview[key])
+                {
+                   // dynamic key = formula["key"];
+                    dynamic limit = formula["limit"];
+                    dynamic prefix = formula["prefix"];
+                }
+
+            }
+
+            List<UCNDigitalPreview> ucnpreviewList = new List<UCNDigitalPreview>();
+            int MaxLimt = 5;
+            string BrndName = ucnpreview.BrandCode[0];
+
             string BCode = "";
             BrndName = BrndName.Trim();
-            BrndName = BrndName.Replace("  "," ");
-            BrndName = RemoveSpecialCharacters(BrndName);
+            string[] aryWords = BrndName.Split(' ');
+            int numOfWords = aryWords.Length;
+            // BrndName = BrndName.Replace("  "," ");
+            // BrndName = RemoveSpecialCharacters(BrndName);
 
-            int lenSrcString = BrndName.Length;
-            if (lenSrcString<=MaxLimt)
+            if (numOfWords >= MaxLimt)
             {
-                BCode = BrndName;
-            } //if (lenSrcString<=MaxLimt)
-            else if (lenSrcString > MaxLimt)
-            { 
-                string[] aryWords = BrndName.Split(' ');
-
-                int numOfWords = aryWords.Length;
-                
-                if (numOfWords==1) {
+                foreach (string aryWord in aryWords)
+                {
+                    BCode = BCode + aryWord.Substring(0, 1);
+                }
+            }
+            else
+            {
+                if (numOfWords == 1)
+                {
                     BCode = BrndName.Substring(0, MaxLimt);
-                }// if (numOfWords == 1)
-                else if (numOfWords==2) 
+                }
+                else if (numOfWords == 2)
                 {
                     BCode = BCode + aryWords[0].Substring(0, 3);
-                    BCode = BCode + aryWords[1].Substring(0, MaxLimt-3);
-                } //else if (numOfWords==2) 
+                    BCode = BCode + aryWords[1].Substring(0, MaxLimt - 3);
+                }
                 else if (numOfWords == 3)
                 {
                     BCode = BCode + aryWords[0].Substring(0, 2);
                     BCode = BCode + aryWords[1].Substring(0, 2);
-                    BCode = BCode + aryWords[2].Substring(0, MaxLimt-4);
+                    BCode = BCode + aryWords[2].Substring(0, MaxLimt - 4);
                 } //else if (numOfWords == 3)
                 else if (numOfWords == 4)
                 {
                     BCode = BCode + aryWords[0].Substring(0, 2);
                     BCode = BCode + aryWords[1].Substring(0, 1);
                     BCode = BCode + aryWords[2].Substring(0, 1);
-                    BCode = BCode + aryWords[3].Substring(0, MaxLimt-4);
-                }// else if (numOfWords == 4)
-                else if (numOfWords == 5)
-                {
-                    BCode = BCode + aryWords[0].Substring(0, 1);
-                    BCode = BCode + aryWords[1].Substring(0, 1);
-                    BCode = BCode + aryWords[2].Substring(0, 1);
-                    BCode = BCode + aryWords[3].Substring(0, 1);
-                    BCode = BCode + aryWords[4].Substring(0, MaxLimt - 4);
-
-                }// else if (numOfWords == 5) 
-                else if (numOfWords == 6)
-                {
-                    BCode = BCode + aryWords[0].Substring(0, 1);
-                    BCode = BCode + aryWords[1].Substring(0, 1);
-                    BCode = BCode + aryWords[2].Substring(0, 1);
-                    BCode = BCode + aryWords[3].Substring(0, 1);
-                    BCode = BCode + aryWords[4].Substring(0, 1);
-                    BCode = BCode + aryWords[5].Substring(0, 1);
-                   // BCode = BCode.Substring(0, MaxLimt); // todo check if this is required
-                }// else if (numOfWords == 6)
-
-                //foreach (String s in aryWords)
-                //{
-                //    Console.WriteLine(s);
-                //}
+                    BCode = BCode + aryWords[3].Substring(0, MaxLimt - 4);
+                }
             }
 
-                return BCode.ToUpper(); 
+            ucnpreview.UCNdigitalCode = BCode.ToUpper();
+            ucnpreviewList.Add(ucnpreview);
+            return ucnpreviewList;
         }
 
         public static string RemoveSpecialCharacters(string str)
@@ -173,7 +162,7 @@ namespace FullStack.API.Controllers
 
 
         }
-        
+
         [Route("GetPlatform")]
         public List<UCNDigitalPlatform> GetUCNPlatform()
         {
@@ -199,7 +188,7 @@ namespace FullStack.API.Controllers
 
 
         }
-        
+
         [Route("GetFormat")]
         public List<UCNDigitalFormat> GetUCNFormat()
         {
