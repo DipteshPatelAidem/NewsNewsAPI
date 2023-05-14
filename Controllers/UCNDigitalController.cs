@@ -52,7 +52,9 @@ namespace FullStack.API.Controllers
         [Route("GetUCNDigital")]
         public List<UCNDigitalPreview> GetUCNCode(dynamic ucnpreview)
         {
-            string ucnMasterConfig = "[{'key':'brandCode','limit':'5','prefix':'','index':'4'},{'key':'caption','limit':'4','prefix':'-','index':'2'},{'key':'duration','limit':'0','prefix':'-','index':'3'},{'key':'language','limit':'0','prefix':'-','index':'1'},{'key':'destination','limit':'0','prefix':'-','index':'5'},{'key':'format','limit':'0','prefix':'-','index':'6'},{'key':'ratio','limit':'0','prefix':'-','index':'7'}]";
+            // string ucnMasterConfig = "[{'key':'brandCode','limit':'5','prefix':'','index':'1'},{'key':'caption','limit':'4','prefix':'-','index':'2'},{'key':'duration','limit':'0','prefix':'-','index':'3'},{'key':'language','limit':'0','prefix':'-','index':'4'},{'key':'destination','limit':'0','prefix':'-','index':'5'},{'key':'format','limit':'0','prefix':'-','index':'6'},{'key':'ratio','limit':'0','prefix':'-','index':'7'}]";
+            string ucnMasterConfig = "[{'key':'brandCode','limit':'5','prefix':'','index':'1'},{'key':'caption','limit':'4','prefix':'','index':'2'},{'key':'duration','limit':'0','prefix':'','index':'3'},{'key':'language','limit':'0','prefix':'','index':'4'},{'key':'destination','limit':'0','prefix':'','index':'5'},{'key':'format','limit':'0','prefix':'','index':'6'},{'key':'ratio','limit':'0','prefix':'','index':'7'}]";
+            //string ucnMasterConfig = "[{'key':'caption','limit':'4','prefix':'-','index':'2'},{'key':'brandCode','limit':'5','prefix':'','index':'4'},{'key':'duration','limit':'0','prefix':'-','index':'3'},{'key':'language','limit':'0','prefix':'-','index':'1'},{'key':'destination','limit':'0','prefix':'-','index':'5'},{'key':'format','limit':'0','prefix':'-','index':'6'},{'key':'ratio','limit':'0','prefix':'-','index':'7'}]";
 
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             dynamic masterConfig = serializer.Deserialize<dynamic>(ucnMasterConfig);
@@ -98,7 +100,7 @@ namespace FullStack.API.Controllers
                 if (CurrentlyProcessFor == "brandCode")
                 {
                     BrndName = ucnpreview.brandname;
-                    ucnCode = ucnCode + GenerateBrandCode((string)ucnpreview.brandname, MaxLimt);
+                    ucnCode = ucnCode + prfix + GenerateBrandCode((string)ucnpreview.brandname, MaxLimt);
                     CurrentlyProcessFor = "";
                 }
                 if (CurrentlyProcessFor == "language")
@@ -107,7 +109,7 @@ namespace FullStack.API.Controllers
                     List<UCNDigitalLanguage> ucnlaguagelist = GetUCNLanguage();
                     UCNDigitalLanguage selectedlng = ucnlaguagelist.SingleOrDefault(x => x.Language.ToUpper() == lng.ToUpper());
                     string lngCd = selectedlng.LanguageCode.ToString();
-                    ucnCode = ucnCode + lngCd ; // todo Lannguage code from master
+                    ucnCode = ucnCode + prfix + lngCd ; // todo Lannguage code from master
                     CurrentlyProcessFor = "";
                 }
                 if (CurrentlyProcessFor == "caption")
@@ -120,13 +122,13 @@ namespace FullStack.API.Controllers
                 {
                     decimal drn = ucnpreview.duration;
                     string strdrn = ( drn ).ToString();
-                    ucnCode = ucnCode + (strdrn);
+                    ucnCode = ucnCode + prfix + (strdrn);
                     // ucnpreview.duration = Decimal.Parse("99.99"); // todo remove
                     CurrentlyProcessFor = "";
                 }
                 if (CurrentlyProcessFor == "destination")
                 {
-                    ucnCode = ucnCode + GeneratePlatformCode((string)ucnpreview.platform);
+                    ucnCode = ucnCode + prfix + GeneratePlatformCode((string)ucnpreview.platform);
                     CurrentlyProcessFor = "";
                 }
                 if (CurrentlyProcessFor == "format")
@@ -136,7 +138,7 @@ namespace FullStack.API.Controllers
                 }
                 if (CurrentlyProcessFor == "ratio")
                 {
-                    ucnCode = ucnCode + "";
+                    ucnCode = ucnCode + prfix + "";
                     CurrentlyProcessFor = "";
                 }
                 //if ( formula[0][0]="key")
@@ -158,6 +160,7 @@ namespace FullStack.API.Controllers
             ucnPreviewResponse.language = ucnpreview.language;
             ucnPreviewResponse.platform = ucnpreview.platform;
             ucnPreviewResponse.format = ucnpreview.format;
+            ucnPreviewResponse.ratio = ucnpreview.ratio;
 
             ucnPreviewResponse.UCNdigitalCode = ucnCode.ToUpper();
             ucnpreviewList.Add(ucnPreviewResponse);
