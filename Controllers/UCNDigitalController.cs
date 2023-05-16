@@ -52,106 +52,117 @@ namespace FullStack.API.Controllers
         [Route("GetUCNDigital")]
         public List<UCNDigitalPreview> GetUCNCode(dynamic ucnpreview)
         {
+
+
+            List<UCNDigitalMasterConfig> ucnmasterconfiglist = GetUCNMasterConfig();
+
+
             // string ucnMasterConfig = "[{'key':'brandCode','limit':'5','prefix':'','index':'1'},{'key':'caption','limit':'4','prefix':'-','index':'2'},{'key':'duration','limit':'0','prefix':'-','index':'3'},{'key':'language','limit':'0','prefix':'-','index':'4'},{'key':'destination','limit':'0','prefix':'-','index':'5'},{'key':'format','limit':'0','prefix':'-','index':'6'},{'key':'ratio','limit':'0','prefix':'-','index':'7'}]";
             string ucnMasterConfig = "[{'key':'brandCode','limit':'5','prefix':'','index':'1'},{'key':'caption','limit':'4','prefix':'','index':'2'},{'key':'duration','limit':'0','prefix':'','index':'3'},{'key':'language','limit':'0','prefix':'','index':'4'},{'key':'destination','limit':'0','prefix':'','index':'5'},{'key':'format','limit':'0','prefix':'','index':'6'},{'key':'ratio','limit':'0','prefix':'','index':'7'}]";
             //string ucnMasterConfig = "[{'key':'caption','limit':'4','prefix':'-','index':'2'},{'key':'brandCode','limit':'5','prefix':'','index':'4'},{'key':'duration','limit':'0','prefix':'-','index':'3'},{'key':'language','limit':'0','prefix':'-','index':'1'},{'key':'destination','limit':'0','prefix':'-','index':'5'},{'key':'format','limit':'0','prefix':'-','index':'6'},{'key':'ratio','limit':'0','prefix':'-','index':'7'}]";
 
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             dynamic masterConfig = serializer.Deserialize<dynamic>(ucnMasterConfig);
-           // masterConfig =Array.Sort(masterConfig,4,1);
+            // masterConfig =Array.Sort(masterConfig,4,1);
             int MaxLimt = 6;
             string BrndName = "";
             string prfix = "";
-//            string[] brandnames;
-            string ucnCode="";
+            //            string[] brandnames;
+            string ucnCode = "";
             List<UCNDigitalPreview> ucnpreviewList = new List<UCNDigitalPreview>();
             int currentCounter = 0;
             int processCounter = 0;
             string CurrentlyProcessFor = "";
 
 
-            // get master config
-            foreach (dynamic formula in masterConfig)
-            {
-                processCounter = 0;
-                currentCounter++;
-                // dynamic key = formula["key"];
-                foreach (dynamic eachAry in formula)
-                {
-                    if (eachAry.Key == "limit")
-                    {
-                        MaxLimt = Int32.Parse(eachAry.Value);
-                    }
-                    if ((eachAry.Key == "prefix") )
-                    {
-                        prfix = eachAry.Value;
-                    }
-                    if ((eachAry.Key== "index"))
-                    {
-                        processCounter = currentCounter;
-                    }
-                    if ((eachAry.Key == "key") )
-                    {
-                        CurrentlyProcessFor = eachAry.Value;
-                    }
 
-                } // foreach (dynamic eachAry in formula)
+            //// get master config
+            //foreach (dynamic formula in masterConfig)
+            //{
+            //    processCounter = 0;
+            //    currentCounter++;
+            //    // dynamic key = formula["key"];
+            //    foreach (dynamic eachAry in formula)
+            //    {
+            //        if (eachAry.Key == "limit")
+            //        {
+            //            MaxLimt = Int32.Parse(eachAry.Value);
+            //        }
+            //        if ((eachAry.Key == "prefix") )
+            //        {
+            //            prfix = eachAry.Value;
+            //        }
+            //        if ((eachAry.Key== "index"))
+            //        {
+            //            processCounter = currentCounter;
+            //        }
+            //        if ((eachAry.Key == "key") )
+            //        {
+            //            CurrentlyProcessFor = eachAry.Value;
+            //        }
+
+            //    } // foreach (dynamic eachAry in formula)
+
+
+
+            foreach (dynamic formulaFromMasterConfig in ucnmasterconfiglist)
+            {
+                MaxLimt = Int32.Parse(formulaFromMasterConfig.limit);
+                CurrentlyProcessFor = formulaFromMasterConfig.key;
+                prfix = formulaFromMasterConfig.prefix;
 
                 if (CurrentlyProcessFor == "brandCode")
                 {
                     BrndName = ucnpreview.brandname;
                     ucnCode = ucnCode + prfix + GenerateBrandCode((string)ucnpreview.brandname, MaxLimt);
                     CurrentlyProcessFor = "";
-                }
+                } // if (CurrentlyProcessFor == "brandCode")
+
                 if (CurrentlyProcessFor == "language")
                 {
                     string lng = ucnpreview.language;
                     List<UCNDigitalLanguage> ucnlaguagelist = GetUCNLanguage();
                     UCNDigitalLanguage selectedlng = ucnlaguagelist.SingleOrDefault(x => x.Language.ToUpper() == lng.ToUpper());
                     string lngCd = selectedlng.LanguageCode.ToString();
-                    ucnCode = ucnCode + prfix + lngCd ; // todo Lannguage code from master
+                    ucnCode = ucnCode + prfix + lngCd; // todo Lannguage code from master
                     CurrentlyProcessFor = "";
-                }
+                } //if (CurrentlyProcessFor == "language")
                 if (CurrentlyProcessFor == "caption")
                 {
                     string caption = (string)ucnpreview.caption;
                     ucnCode = ucnCode + GenerateCaptionCode((string)caption, MaxLimt);
                     CurrentlyProcessFor = "";
-                }
+                } //if (CurrentlyProcessFor == "caption")
                 if (CurrentlyProcessFor == "duration")
                 {
                     decimal drn = ucnpreview.duration;
-                    string strdrn = ( drn ).ToString();
+                    string strdrn = (drn).ToString();
                     ucnCode = ucnCode + prfix + (strdrn);
                     // ucnpreview.duration = Decimal.Parse("99.99"); // todo remove
                     CurrentlyProcessFor = "";
-                }
+                } //if (CurrentlyProcessFor == "duration")
                 if (CurrentlyProcessFor == "destination")
                 {
                     ucnCode = ucnCode + prfix + GeneratePlatformCode((string)ucnpreview.platform);
                     CurrentlyProcessFor = "";
-                }
+                } //if (CurrentlyProcessFor == "destination")
+
                 if (CurrentlyProcessFor == "format")
                 {
                     ucnCode = ucnCode + GenerateFormatCode((string)ucnpreview.format); ;
                     CurrentlyProcessFor = "";
-                }
+                } // if (CurrentlyProcessFor == "format")
                 if (CurrentlyProcessFor == "ratio")
                 {
                     ucnCode = ucnCode + prfix + "";
                     CurrentlyProcessFor = "";
-                }
-                //if ( formula[0][0]="key")
-                //{
-                //   // dynamic key = formula["key"];
-                //    dynamic limit = formula["limit"];
-                //    dynamic prefix = formula["prefix"];
-                //}
-
-            } //foreach (dynamic formula in masterConfig)
+                } //if (CurrentlyProcessFor == "ratio")
 
 
-            //ucnpreview.
+
+            } // foreach (dynamic formulaFromMasterConfig in ucnmasterconfiglist)
+
+            //           } //foreach (dynamic formula in masterConfig)
 
             var ucnPreviewResponse = new UCNDigitalPreview();
             ucnPreviewResponse.brandname = ucnpreview.brandname;
@@ -166,9 +177,31 @@ namespace FullStack.API.Controllers
             ucnpreviewList.Add(ucnPreviewResponse);
             return ucnpreviewList;
         }
+        public List<UCNDigitalMasterConfig> GetUCNMasterConfig()
+        {
+            List<UCNDigitalMasterConfig> masterconfigList = new List<UCNDigitalMasterConfig>();
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd = new SqlCommand("GetUCNMasterConfig", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                con.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    var ucnmasterconfig = new UCNDigitalMasterConfig();
+                    ucnmasterconfig.key = (string)rdr["key"];
+                    ucnmasterconfig.limit = (string)rdr["limit"];
+                    ucnmasterconfig.prefix = (string)rdr["prefix"];
+                    ucnmasterconfig.index = (int)rdr["index"];
+
+                    masterconfigList.Add(ucnmasterconfig);
+                }
+            }
+            return masterconfigList;
 
 
-
+        }
         public string GenerateBrandCode(string BrndName, int MaxLimt)
         {
             string BCode = "";
@@ -215,7 +248,7 @@ namespace FullStack.API.Controllers
         }
         public string GenerateCaptionCode(string caption, int MaxLimt)
         {
-           // string cption ;
+            // string cption ;
             StringBuilder sb = new StringBuilder();
             foreach (char c in caption)
             {
@@ -233,7 +266,7 @@ namespace FullStack.API.Controllers
             List<UCNDigitalPlatform> ucnPlatformlist = GetUCNPlatform();
             UCNDigitalPlatform selectedPlatfrm = ucnPlatformlist.SingleOrDefault(x => x.Platform.ToUpper() == platfrm.ToUpper());
             string pltfrmCd = selectedPlatfrm.PlatformCode.ToString();
-            pltfrmCd=pltfrmCd.PadLeft(4,'0');
+            pltfrmCd = pltfrmCd.PadLeft(4, '0');
             return pltfrmCd;
         }
         public string GenerateFormatCode(string format)
@@ -244,7 +277,6 @@ namespace FullStack.API.Controllers
             string formatCd = selectedFormat.FormatCode.ToString();
             return formatCd;
         }
-
 
         [Route("GetLanguage")]
         public List<UCNDigitalLanguage> GetUCNLanguage()
@@ -387,9 +419,6 @@ namespace FullStack.API.Controllers
 
         }
 
-
-
-
         [Route("GetRatio")]
         public List<UCNDigitalRatio> GetUCNRatio()
         {
@@ -416,5 +445,64 @@ namespace FullStack.API.Controllers
 
         }
 
+
+        [HttpPost]
+        [Route("UCNDigitalInsert")]
+        public IHttpActionResult UCNDigitalInsert(UCNDigital ucndigital)
+        {
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd = new SqlCommand("UCNDigitalInsert", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@UCNdigitalCode", SqlDbType.VarChar);
+                cmd.Parameters["@UCNdigitalCode"].Value = ucndigital.UCNdigitalCode;
+
+                cmd.Parameters.Add("@BrandID", SqlDbType.Int);
+                cmd.Parameters["@BrandID"].Value = ucndigital.BrandID;
+
+                cmd.Parameters.Add("@Caption", SqlDbType.VarChar);
+                cmd.Parameters["@Caption"].Value = ucndigital.Caption;
+
+                cmd.Parameters.Add("@DurationID", SqlDbType.Int);
+                cmd.Parameters["@DurationID"].Value = ucndigital.DurationID;
+
+                cmd.Parameters.Add("@LanguageID", SqlDbType.Int);
+                cmd.Parameters["@LanguageID"].Value = ucndigital.LanguageID;
+
+                cmd.Parameters.Add("@PlatformID", SqlDbType.Int);
+                cmd.Parameters["@PlatformID"].Value = ucndigital.PlatformID;
+
+                cmd.Parameters.Add("@FormatID", SqlDbType.Int);
+                cmd.Parameters["@FormatID"].Value = ucndigital.FormatID;
+
+                cmd.Parameters.Add("@RatioID", SqlDbType.Int);
+                // cmd.Parameters["@RatioID"].Value = DBNull.Value; // ucndigital.RatioID;
+                if (ucndigital.RatioID.HasValue)
+                {
+                    cmd.Parameters["@RatioID"].Value = ucndigital.RatioID;
+                }
+                else
+                {
+                    cmd.Parameters["@RatioID"].Value = DBNull.Value; // ucndigital.RatioID;
+                }
+
+                cmd.Parameters.Add("@config", SqlDbType.Text);
+                cmd.Parameters["@config"].Value = ucndigital.config;
+
+                cmd.Parameters.Add("@EnteredBy", SqlDbType.Int);
+                cmd.Parameters["@EnteredBy"].Value = ucndigital.EnteredBy;
+
+                cmd.Parameters.Add("@UpdatedBy", SqlDbType.Int);
+                cmd.Parameters["@UpdatedBy"].Value = DBNull.Value; // ucndigital.UpdatedBy;
+
+                cmd.Parameters.Add("@CompanyID", SqlDbType.Int);
+                cmd.Parameters["@CompanyID"].Value = ucndigital.CompanyID;
+
+                con.Open();
+
+                cmd.ExecuteNonQuery();
+            }
+            return Ok();
+        }
     }
 }
