@@ -504,5 +504,37 @@ namespace FullStack.API.Controllers
             }
             return Ok();
         }
+
+        [Route("GetUCNdigitalList")]
+        public List<UCNDigitalPreview> GetUCNdigitalList(string filter)
+        {
+            List<UCNDigitalPreview> ucndigitalList = new List<UCNDigitalPreview>();
+            using (SqlConnection con = new SqlConnection(CS))
+            {
+                SqlCommand cmd = new SqlCommand("GetUCNDigital", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@filter", SqlDbType.VarChar);
+                cmd.Parameters["@filter"].Value = "1=1";
+
+                con.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                while (rdr.Read())
+                {
+                    var ucnPreviewResponse = new UCNDigitalPreview();
+                    ucnPreviewResponse.brandname = (string)rdr["Brand"];
+                    ucnPreviewResponse.caption = (string)rdr["caption"];
+                    ucnPreviewResponse.duration = Decimal.Parse(rdr["duration"].ToString());
+                    ucnPreviewResponse.language = (string)rdr["language"];
+                    ucnPreviewResponse.platform = (string)rdr["platform"];
+                    ucnPreviewResponse.format = (string)rdr["format"];
+                    ucnPreviewResponse.ratio = rdr["ratio"].ToString();
+                    ucnPreviewResponse.UCNdigitalCode = (string)rdr["ucnCode"];
+                    ucndigitalList.Add(ucnPreviewResponse);
+                }
+            }
+            return ucndigitalList;
+
+        }
+
     }
 }
