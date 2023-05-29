@@ -20,7 +20,9 @@ namespace FullStack.API.Models
         public string strContactFor { get; set; }
 
         public int intEnteredBy { get; set; }
-      //  public int? intDelFlag { get; set; }
+        //  public int? intDelFlag { get; set; }
 
+        public string ContactNumber { get; set; }
+        public string eMail { get; set; }
     }
 }
