@@ -259,6 +259,7 @@
     <Compile Include="Controllers\MeetingTypeController.cs" />
     <Compile Include="Controllers\PurposeController.cs" />
     <Compile Include="Controllers\TitlePersonController.cs" />
+    <Compile Include="Controllers\UCNDigitalController.cs" />
     <Compile Include="Controllers\VisitReportController.cs" />
     <Compile Include="Models\AccompaniedBy.cs" />
     <Compile Include="Models\Advertiser.cs" />
@@ -275,6 +276,14 @@
     <Compile Include="Models\MeetingType.cs" />
     <Compile Include="Models\Purpose.cs" />
     <Compile Include="Models\TitlePerson.cs" />
+    <Compile Include="Models\UCNDigitalBrand.cs" />
+    <Compile Include="Models\UCNDigitalDuration.cs" />
+    <Compile Include="Models\UCNDigitalFormat.cs" />
+    <Compile Include="Models\UCNDigitalLanguage.cs" />
+    <Compile Include="Models\UCNDigitalPlatform.cs" />
+    <Compile Include="Models\UCNDigitalPlatformFormat.cs" />
+    <Compile Include="Models\UCNDigitalPreview.cs" />
+    <Compile Include="Models\UCNDigitalRatio.cs" />
     <Compile Include="Models\VisitReport.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Results\ChallengeResult.cs" />

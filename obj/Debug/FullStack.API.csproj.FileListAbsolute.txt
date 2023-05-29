@@ -279,3 +279,5 @@ D:\work\rNd\JG\FullStack.API\bin\System.Web.Http.Owin.xml
 D:\work\rNd\JG\FullStack.API\obj\Debug\FullStack.API.dll
 D:\work\rNd\JG\FullStack.API\obj\Debug\FullStack.API.pdb
 D:\work\rNd\JG\FullStack.API\obj\Debug\FullStack.API.csprojResolveAssemblyReference.cache
+D:\work\Projects\NEXT NEWS 2.0\API\NewsNewsAPI\obj\Debug\FullStack.API.dll
+D:\work\Projects\NEXT NEWS 2.0\API\NewsNewsAPI\obj\Debug\FullStack.API.pdb
