@@ -70,8 +70,8 @@ namespace FullStack.API.Controllers
             //            string[] brandnames;
             string ucnCode = "";
             List<UCNDigitalPreview> ucnpreviewList = new List<UCNDigitalPreview>();
-            int currentCounter = 0;
-            int processCounter = 0;
+            //int currentCounter = 0;
+            //int processCounter = 0;
             string CurrentlyProcessFor = "";
 
 
